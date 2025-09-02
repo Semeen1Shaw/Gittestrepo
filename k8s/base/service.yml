@@ -9,6 +9,7 @@ spec:
   - port: 7894
     protocol: TCP
     targetPort: 7894
+    nodePort: 30628
   selector:
     app: flaskapp
   type: NodePort

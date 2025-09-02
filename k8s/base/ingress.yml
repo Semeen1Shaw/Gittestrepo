@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: flaskapp
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: demo.flask.app
+    http:
+      paths:
+      - backend:
+          service:
+            name: flaskapp
+            port:
+              number: 7894
+        path: /
+        pathType: Prefix
