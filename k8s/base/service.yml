@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: flaskapp
+  name: flaskapp
+spec:
+  ports:
+  - port: 7894
+    protocol: TCP
+    targetPort: 7894
+  selector:
+    app: flaskapp
+  type: NodePort
+status:
+  loadBalancer: {}
