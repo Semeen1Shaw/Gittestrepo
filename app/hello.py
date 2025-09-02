@@ -15,6 +15,10 @@ def hello_name(name):
 def show_blogs(id):
     return "The Blog is %s!" %id
 
+@app.route("/contact-us")
+def contact_us():
+    return "Connect us on: 00000000"
+
 if (__name__) == "__main__":
     app.debug = True
     app.run()
