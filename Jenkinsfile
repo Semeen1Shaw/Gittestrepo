@@ -4,7 +4,6 @@ pipeline {
     environment {
         IMAGE_NAME = "semeen1shaw/pythonapp"
         SHORT_SHA = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
-	PATH = "/var/lib/jenkins/go/bin:$PATH"
     }
 
     triggers {
