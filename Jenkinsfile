@@ -39,8 +39,9 @@ pipeline {
             steps {
                 sh '''
                 # Update the dev overlay with new image tag
-                kustomize edit set image $IMAGE_NAME=$IMAGE_NAME:dev-$SHORT_SHA -o k8s/overlays/dev
-                kubectl apply -k k8s/overlays/dev
+		cd k8s/overlays/dev
+                kustomize edit set image $IMAGE_NAME=$IMAGE_NAME:dev-$SHORT_SHA 
+                kubectl apply -k .
                 '''
             }
         }
