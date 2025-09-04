@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "your-docker-user/flaskapp"
+        IMAGE_NAME = "semeen1shaw/pythonapp"
         SHORT_SHA = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
     }
 

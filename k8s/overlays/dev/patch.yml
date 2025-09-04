@@ -3,10 +3,4 @@ kind: Deployment
 metadata:
   name: flaskapp
 spec:
-  replicas: 5
-  template:
-    spec:
-      containers:
-          - name: pythonapp
-            image: semeen1shaw/pythonapp:dev
-
+  replicas: 2
